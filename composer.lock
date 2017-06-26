@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "83fd7a539537b8015fe1c303ac975d6e",
+    "content-hash": "c0331ad20dc46ea5c825691674f02a16",
     "packages": [
         {
             "name": "devboard/github-lib",
-            "version": "dev-master",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devboard/github-lib.git",
-                "reference": "60815cc3aef53eaba9e701e21b35c5f19fee26dc"
+                "reference": "2c7f5830c2f6f5eb00c26c01c92fbd42d49db178"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devboard/github-lib/zipball/60815cc3aef53eaba9e701e21b35c5f19fee26dc",
-                "reference": "60815cc3aef53eaba9e701e21b35c5f19fee26dc",
+                "url": "https://api.github.com/repos/devboard/github-lib/zipball/2c7f5830c2f6f5eb00c26c01c92fbd42d49db178",
+                "reference": "2c7f5830c2f6f5eb00c26c01c92fbd42d49db178",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
             "license": [
                 "proprietary"
             ],
-            "time": "2017-06-01 20:21:12"
+            "time": "2017-06-25T22:00:16+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -4416,7 +4416,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "devboard/github-lib": 20,
         "humbug/humbug": 20
     },
     "prefer-stable": false,
