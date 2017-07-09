@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b0f0ad103e307a41c27f3095d3aff97",
+    "content-hash": "5da8d81add415b38248111c789e95a17",
     "packages": [
         {
             "name": "devboard/github-lib",
-            "version": "0.6.0",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devboard/github-lib.git",
-                "reference": "7458890728ef3460815b0902f3c52987bb34aacf"
+                "reference": "4074869ad3e222f2bb534f360640d8e4dd4d9a12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devboard/github-lib/zipball/7458890728ef3460815b0902f3c52987bb34aacf",
-                "reference": "7458890728ef3460815b0902f3c52987bb34aacf",
+                "url": "https://api.github.com/repos/devboard/github-lib/zipball/4074869ad3e222f2bb534f360640d8e4dd4d9a12",
+                "reference": "4074869ad3e222f2bb534f360640d8e4dd4d9a12",
                 "shasum": ""
             },
             "require": {
@@ -44,20 +44,20 @@
             "type": "project",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.4.x-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Devboard\\GitHub\\": "src/",
-                    "tests\\Devboard\\GitHub\\": "tests/"
+                    "DevboardLib\\GitHub\\": "src/",
+                    "tests\\DevboardLib\\GitHub\\": "tests/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
-            "time": "2017-06-28T19:42:36+00:00"
+            "time": "2017-07-07T23:05:23+00:00"
         },
         {
             "name": "doctrine/annotations",
