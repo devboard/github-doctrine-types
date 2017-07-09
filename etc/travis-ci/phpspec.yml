@@ -4,8 +4,8 @@ extensions:
   PhpSpecCodeCoverage\CodeCoverageExtension: ~
 suites:
     acme_suite:
-        namespace: Devboard\GitHub
-        psr4_prefix: Devboard\GitHub
+        namespace: DevboardLib\GitHubDoctrineType
+        psr4_prefix: DevboardLib\GitHubDoctrineType
 code_coverage:
   format:
     - html
