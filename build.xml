@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<project default="default" name="GitHub Doctrine Types">
+
+    <target name="default" description="Help target">
+        <exec command="phing -l" passthru="true"/>
+    </target>
+
+    <target name="all" depends="fix-codestandards,phpstan"/>
+
+    <target name="fix-codestandards" depends="phpcbf,php-cs-fixer-fix,phpmd,phpcs"/>
+    <target name="check-codestandards" depends="php-cs-fixer-check,phpmd,phpcs"/>
+
+    <target name="php-cs-fixer-fix" description="Run php-cs-fixer fix">
+        <retry retrycount="3">
+            <exec command="./vendor/bin/php-cs-fixer fix" passthru="true" checkreturn="true"/>
+        </retry>
+    </target>
+
+    <target name="phpstan" description="Run phpstan">
+        <exec command="./vendor/bin/phpstan --memory-limit=-1 analyse -l 7 -c phpstan.neon src" passthru="true" checkreturn="true"/>
+    </target>
+
+    <target name="php-cs-fixer-check" description="Run php-cs-fixer check">
+        <exec command="./vendor/bin/php-cs-fixer fix --dry-run --diff" passthru="true" checkreturn="true"/>
+    </target>
+
+    <target name="phpmd" description="Run phpmd">
+            <phingcall target="phpmd-task">
+                <property name="path" value="src"/>
+            </phingcall>
+    </target>
+
+    <target name="phpcs" description="Run phpcs">
+            <phingcall target="phpcs-task">
+                <property name="path" value="src"/>
+            </phingcall>
+    </target>
+
+    <target name="phpcbf" description="Run phpcbf">
+                <phingcall target="phpcbf-task">
+                    <property name="path" value="src"/>
+                </phingcall>
+    </target>
+
+    <target name="phpmd-task" description="Run php mess detector">
+        <exec command="./vendor/bin/phpmd ${path} text phpmd.xml" passthru="true" checkreturn="true"/>
+    </target>
+    <target name="phpcs-task" description="Run php code sniffer">
+        <exec command="./vendor/bin/phpcs --standard=phpcs.xml ${path} -n" passthru="true" checkreturn="true"/>
+    </target>
+    <target name="phpcbf-task" description="Run php code sniffer fixer">
+        <exec command="./vendor/bin/phpcbf --standard=phpcs.xml ${path} -n" passthru="true" checkreturn="true"/>
+    </target>
+
+</project>

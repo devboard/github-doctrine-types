@@ -1,0 +1,44 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: msvrtan/square:0.2.2
+    working_directory: /var/www
+    parallel: 1
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: cache-v1-{{ checksum "composer.lock" }}
+          
+      - run:
+          name: Disable xdebug
+          command: ./etc/circleci2/disable-xdebug.sh
+
+      - run:
+          name: Composer install
+          command: composer install --prefer-dist --no-interaction
+
+      - run:
+          name: Lint all PHP code files
+          command: git diff --name-only --diff-filter=ACMR 808533ed086586aab4c08822605720caf0d639cf | grep -E "^(src)\/.*php$" | xargs -n1 php -l 1> /dev/null
+
+
+      - run:
+          name: PHPStan
+          command: ./vendor/bin/phing phpstan
+
+      - run:
+          name: Code standards
+          command: ./vendor/bin/phing check-codestandards
+
+      - save_cache:
+          key: cache-v1-{{ checksum "composer.lock" }}
+          paths:
+            - /var/www/vendor
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
