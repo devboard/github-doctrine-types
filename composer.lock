@@ -1285,22 +1285,23 @@
         },
         {
             "name": "leanphp/phpspec-code-coverage",
-            "version": "v4.0.0",
+            "version": "v4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leanphp/phpspec-code-coverage.git",
-                "reference": "668b9777ead9872a43d58bfa16a8f2feeb63294c"
+                "reference": "e1e9e0429ef86c90e867af87bce2040e04a86d30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leanphp/phpspec-code-coverage/zipball/668b9777ead9872a43d58bfa16a8f2feeb63294c",
-                "reference": "668b9777ead9872a43d58bfa16a8f2feeb63294c",
+                "url": "https://api.github.com/repos/leanphp/phpspec-code-coverage/zipball/e1e9e0429ef86c90e867af87bce2040e04a86d30",
+                "reference": "e1e9e0429ef86c90e867af87bce2040e04a86d30",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.0",
                 "phpspec/phpspec": "^4.0",
-                "phpunit/php-code-coverage": "~4.0||~5.0"
+                "phpunit/php-code-coverage": "~5.0",
+                "sebastian/comparator": "~2.0"
             },
             "require-dev": {
                 "bossa/phpspec2-expect": "^3.0"
@@ -1351,7 +1352,7 @@
                 "test",
                 "tests"
             ],
-            "time": "2017-10-17T14:34:12+00:00"
+            "time": "2018-03-18T23:46:32+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -2080,7 +2081,7 @@
                     "homepage": "http://blog.astrumfutura.com"
                 },
                 {
-                    "name": "Théo Fidry",
+                    "name": "Théo FIDRY",
                     "email": "theo.fidry@gmail.com"
                 }
             ],
