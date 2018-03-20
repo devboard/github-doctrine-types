@@ -133,16 +133,16 @@
         },
         {
             "name": "devboard/lib-github",
-            "version": "0.1.5",
+            "version": "0.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devboard/lib-github.git",
-                "reference": "6518a60c24c30321432852b1363611e730df2a8d"
+                "reference": "950606e2a0d86cb2286dfb8ba9d22400be6dbf3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devboard/lib-github/zipball/6518a60c24c30321432852b1363611e730df2a8d",
-                "reference": "6518a60c24c30321432852b1363611e730df2a8d",
+                "url": "https://api.github.com/repos/devboard/lib-github/zipball/950606e2a0d86cb2286dfb8ba9d22400be6dbf3f",
+                "reference": "950606e2a0d86cb2286dfb8ba9d22400be6dbf3f",
                 "shasum": ""
             },
             "require": {
@@ -177,7 +177,7 @@
                 "proprietary"
             ],
             "description": "Devboard lib for GitHub",
-            "time": "2018-03-16T21:03:20+00:00"
+            "time": "2018-03-19T11:27:26+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -2135,7 +2135,7 @@
             ],
             "authors": [
                 {
-                    "name": "Padraic Brady",
+                    "name": "Pádraic Brady",
                     "email": "padraic.brady@gmail.com",
                     "homepage": "http://blog.astrumfutura.com"
                 }
