@@ -1285,16 +1285,16 @@
         },
         {
             "name": "leanphp/phpspec-code-coverage",
-            "version": "v4.1.1",
+            "version": "v4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leanphp/phpspec-code-coverage.git",
-                "reference": "e1e9e0429ef86c90e867af87bce2040e04a86d30"
+                "reference": "8e04b67d053865833fc671d32ffa75b4ac328317"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leanphp/phpspec-code-coverage/zipball/e1e9e0429ef86c90e867af87bce2040e04a86d30",
-                "reference": "e1e9e0429ef86c90e867af87bce2040e04a86d30",
+                "url": "https://api.github.com/repos/leanphp/phpspec-code-coverage/zipball/8e04b67d053865833fc671d32ffa75b4ac328317",
+                "reference": "8e04b67d053865833fc671d32ffa75b4ac328317",
                 "shasum": ""
             },
             "require": {
@@ -1352,7 +1352,7 @@
                 "test",
                 "tests"
             ],
-            "time": "2018-03-18T23:46:32+00:00"
+            "time": "2018-03-21T12:58:42+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -2081,7 +2081,7 @@
                     "homepage": "http://blog.astrumfutura.com"
                 },
                 {
-                    "name": "Théo Fidry",
+                    "name": "Théo FIDRY",
                     "email": "theo.fidry@gmail.com"
                 }
             ],
@@ -2135,7 +2135,7 @@
             ],
             "authors": [
                 {
-                    "name": "Padraic Brady",
+                    "name": "Pádraic Brady",
                     "email": "padraic.brady@gmail.com",
                     "homepage": "http://blog.astrumfutura.com"
                 }
