@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7917d257c203616642b0781d7142ecf4",
+    "content-hash": "4254d2a2461e136b02f03c119c6321a8",
     "packages": [
         {
             "name": "devboard/git-interfaces",
@@ -133,16 +133,16 @@
         },
         {
             "name": "devboard/lib-github",
-            "version": "0.1.6",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devboard/lib-github.git",
-                "reference": "950606e2a0d86cb2286dfb8ba9d22400be6dbf3f"
+                "reference": "380d0a685a89895b483a0ef213ea65af88883f82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devboard/lib-github/zipball/950606e2a0d86cb2286dfb8ba9d22400be6dbf3f",
-                "reference": "950606e2a0d86cb2286dfb8ba9d22400be6dbf3f",
+                "url": "https://api.github.com/repos/devboard/lib-github/zipball/380d0a685a89895b483a0ef213ea65af88883f82",
+                "reference": "380d0a685a89895b483a0ef213ea65af88883f82",
                 "shasum": ""
             },
             "require": {
@@ -177,7 +177,7 @@
                 "proprietary"
             ],
             "description": "Devboard lib for GitHub",
-            "time": "2018-03-19T11:27:26+00:00"
+            "time": "2018-03-25T07:38:56+00:00"
         },
         {
             "name": "doctrine/annotations",
