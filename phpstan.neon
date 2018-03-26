@@ -1,3 +1,4 @@
 parameters:
 	ignoreErrors:
 	    - '#Instantiated class Devboard\\GitHubBuild\\Core\\GitHubBuildId not found.#'
+	    - '#Instantiated class Devboard\\GitHubPullRequest\\Core\\GitHubPullRequestRootId not found.#'
