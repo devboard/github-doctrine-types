@@ -27,7 +27,7 @@ class AccountIdType extends IntegerType
             return null;
         }
 
-        return $value->getValue();
+        return $value->getId();
     }
 
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */

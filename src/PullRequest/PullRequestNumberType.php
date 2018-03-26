@@ -27,7 +27,7 @@ class PullRequestNumberType extends IntegerType
             return null;
         }
 
-        return $value->getId();
+        return $value->getValue();
     }
 
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
