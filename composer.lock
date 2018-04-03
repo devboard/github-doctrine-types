@@ -133,16 +133,16 @@
         },
         {
             "name": "devboard/lib-github",
-            "version": "0.2.0",
+            "version": "0.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/devboard/lib-github.git",
-                "reference": "380d0a685a89895b483a0ef213ea65af88883f82"
+                "reference": "89e2ea952808790b797f230aa29a9e5bc031b028"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/devboard/lib-github/zipball/380d0a685a89895b483a0ef213ea65af88883f82",
-                "reference": "380d0a685a89895b483a0ef213ea65af88883f82",
+                "url": "https://api.github.com/repos/devboard/lib-github/zipball/89e2ea952808790b797f230aa29a9e5bc031b028",
+                "reference": "89e2ea952808790b797f230aa29a9e5bc031b028",
                 "shasum": ""
             },
             "require": {
@@ -153,8 +153,8 @@
             },
             "require-dev": {
                 "ciaranmcnulty/phpspec-typehintedmethods": "^3.0",
-                "friendsofphp/php-cs-fixer": "dev-long-line-fixers",
-                "infection/infection": "^0.7.0",
+                "friendsofphp/php-cs-fixer": "dev-long-line-fixers2",
+                "infection/infection": "^0.8.1",
                 "leanphp/phpspec-code-coverage": "^4.0",
                 "mockery/mockery": "^1.0",
                 "phing/phing": "^2.16",
@@ -177,7 +177,7 @@
                 "proprietary"
             ],
             "description": "Devboard lib for GitHub",
-            "time": "2018-03-25T07:38:56+00:00"
+            "time": "2018-04-03T06:18:08+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -2136,7 +2136,7 @@
             ],
             "authors": [
                 {
-                    "name": "Pádraic Brady",
+                    "name": "Padraic Brady",
                     "email": "padraic.brady@gmail.com",
                     "homepage": "http://blog.astrumfutura.com"
                 }
