@@ -9,9 +9,6 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache:
-          key: cache-v1-{{ checksum "composer.lock" }}
-          
       - run:
           name: Disable xdebug
           command: ./etc/circleci2/disable-xdebug.sh
@@ -33,10 +30,6 @@ jobs:
           name: Code standards
           command: ./vendor/bin/phing check-codestandards
 
-      - save_cache:
-          key: cache-v1-{{ checksum "composer.lock" }}
-          paths:
-            - /var/www/vendor
 workflows:
   version: 2
   build-and-deploy:
