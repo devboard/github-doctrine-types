@@ -16,9 +16,9 @@
     },
     "require": {
         "php": ">=7.1.0",
-        "devboard/lib-generix": "0.4.*@dev",
-        "devboard/lib-git": "0.4.*@dev",
-        "devboard/lib-github": "0.4.*@dev",
+        "devboard/lib-generix": "0.5.*@dev",
+        "devboard/lib-git": "0.5.*@dev",
+        "devboard/lib-github": "0.5.*@dev",
         "doctrine/dbal": "^2.5"
     },
     "require-dev": {
