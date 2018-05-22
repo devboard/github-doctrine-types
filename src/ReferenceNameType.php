@@ -23,7 +23,7 @@ class ReferenceNameType extends Type
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
     public function convertToPhpValue($value, AbstractPlatform $platform)
     {
-        if (empty($value)) {
+        if (null === $value) {
             return null;
         }
 
@@ -45,7 +45,7 @@ class ReferenceNameType extends Type
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {
-        if (empty($value)) {
+        if (null === $value) {
             return null;
         }
 
