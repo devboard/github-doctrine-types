@@ -16,7 +16,6 @@
     },
     "require": {
         "php": ">=7.1.0",
-        "devboard/lib-git": "0.5.*@dev",
         "devboard/lib-github": "0.6.*@dev",
         "doctrine/dbal": "^2.5"
     },
