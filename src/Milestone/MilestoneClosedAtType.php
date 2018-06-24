@@ -7,7 +7,6 @@ namespace DevboardLib\GitHubDoctrineType\Milestone;
 use DateTime;
 use DevboardLib\GitHub\Milestone\MilestoneClosedAt;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Types\DateTimeType;
 
 class MilestoneClosedAtType extends DateTimeType
@@ -20,16 +19,6 @@ class MilestoneClosedAtType extends DateTimeType
         }
 
         $val = MilestoneClosedAt::createFromFormat($platform->getDateTimeFormatString(), $value);
-
-        if (!$val) {
-            $val = date_create($value);
-        }
-
-        if (!$val) {
-            throw ConversionException::conversionFailedFormat(
-                $value, $this->getName(), $platform->getDateTimeFormatString()
-            );
-        }
 
         return $val;
     }

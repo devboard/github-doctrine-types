@@ -7,7 +7,6 @@ namespace DevboardLib\GitHubDoctrineType\PullRequest;
 use DateTime;
 use DevboardLib\GitHub\PullRequest\PullRequestUpdatedAt;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Types\DateTimeType;
 
 class PullRequestUpdatedAtType extends DateTimeType
@@ -20,16 +19,6 @@ class PullRequestUpdatedAtType extends DateTimeType
         }
 
         $val = PullRequestUpdatedAt::createFromFormat($platform->getDateTimeFormatString(), $value);
-
-        if (!$val) {
-            $val = date_create($value);
-        }
-
-        if (!$val) {
-            throw ConversionException::conversionFailedFormat(
-                $value, $this->getName(), $platform->getDateTimeFormatString()
-            );
-        }
 
         return $val;
     }

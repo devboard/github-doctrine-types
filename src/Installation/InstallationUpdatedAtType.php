@@ -7,7 +7,6 @@ namespace DevboardLib\GitHubDoctrineType\Installation;
 use DateTime;
 use DevboardLib\GitHub\Installation\InstallationUpdatedAt;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Types\DateTimeType;
 
 class InstallationUpdatedAtType extends DateTimeType
@@ -20,16 +19,6 @@ class InstallationUpdatedAtType extends DateTimeType
         }
 
         $val = InstallationUpdatedAt::createFromFormat($platform->getDateTimeFormatString(), $value);
-
-        if (!$val) {
-            $val = date_create($value);
-        }
-
-        if (!$val) {
-            throw ConversionException::conversionFailedFormat(
-                $value, $this->getName(), $platform->getDateTimeFormatString()
-            );
-        }
 
         return $val;
     }

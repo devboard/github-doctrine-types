@@ -7,7 +7,6 @@ namespace DevboardLib\GitHubDoctrineType\IssueComment;
 use DateTime;
 use DevboardLib\GitHub\IssueComment\IssueCommentCreatedAt;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Types\DateTimeType;
 
 class IssueCommentCreatedAtType extends DateTimeType
@@ -20,16 +19,6 @@ class IssueCommentCreatedAtType extends DateTimeType
         }
 
         $val = IssueCommentCreatedAt::createFromFormat($platform->getDateTimeFormatString(), $value);
-
-        if (!$val) {
-            $val = date_create($value);
-        }
-
-        if (!$val) {
-            throw ConversionException::conversionFailedFormat(
-                $value, $this->getName(), $platform->getDateTimeFormatString()
-            );
-        }
 
         return $val;
     }
