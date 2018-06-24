@@ -7,7 +7,6 @@ namespace DevboardLib\GitHubDoctrineType\Issue;
 use DateTime;
 use DevboardLib\GitHub\Issue\IssueCreatedAt;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Types\DateTimeType;
 
 class IssueCreatedAtType extends DateTimeType
@@ -20,16 +19,6 @@ class IssueCreatedAtType extends DateTimeType
         }
 
         $val = IssueCreatedAt::createFromFormat($platform->getDateTimeFormatString(), $value);
-
-        if (!$val) {
-            $val = date_create($value);
-        }
-
-        if (!$val) {
-            throw ConversionException::conversionFailedFormat(
-                $value, $this->getName(), $platform->getDateTimeFormatString()
-            );
-        }
 
         return $val;
     }

@@ -7,7 +7,6 @@ namespace DevboardLib\GitHubDoctrineType\Commit;
 use DateTime;
 use DevboardLib\Git\Commit\CommitDate;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Types\DateTimeType;
 
 class CommitDateType extends DateTimeType
@@ -20,16 +19,6 @@ class CommitDateType extends DateTimeType
         }
 
         $val = CommitDate::createFromFormat($platform->getDateTimeFormatString(), $value);
-
-        if (!$val) {
-            $val = date_create($value);
-        }
-
-        if (!$val) {
-            throw ConversionException::conversionFailedFormat(
-                $value, $this->getName(), $platform->getDateTimeFormatString()
-            );
-        }
 
         return $val;
     }

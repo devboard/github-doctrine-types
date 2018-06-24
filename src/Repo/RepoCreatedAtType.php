@@ -7,7 +7,6 @@ namespace DevboardLib\GitHubDoctrineType\Repo;
 use DateTime;
 use DevboardLib\GitHub\Repo\RepoCreatedAt;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Types\DateTimeType;
 
 class RepoCreatedAtType extends DateTimeType
@@ -20,16 +19,6 @@ class RepoCreatedAtType extends DateTimeType
         }
 
         $val = RepoCreatedAt::createFromFormat($platform->getDateTimeFormatString(), $value);
-
-        if (!$val) {
-            $val = date_create($value);
-        }
-
-        if (!$val) {
-            throw ConversionException::conversionFailedFormat(
-                $value, $this->getName(), $platform->getDateTimeFormatString()
-            );
-        }
 
         return $val;
     }
