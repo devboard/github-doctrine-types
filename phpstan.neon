@@ -1,6 +1,15 @@
 parameters:
 	ignoreErrors:
-	    - '#Instantiated class Devboard\\GitHubBuild\\Core\\GitHubBuildId not found.#'
-	    - '#Instantiated class Devboard\\GitHubPullRequest\\Core\\GitHubPullRequestRootId not found.#'
+		- '#Instantiated class Devboard\\GitHubBuild\\Core\\GitHubBuildId not found.#'
+		- '#Instantiated class Devboard\\GitHubPullRequest\\Core\\GitHubPullRequestRootId not found.#'
+		- '#Method .*::convertToPhpValue\(\) does not match parent method name: .*::convertToPHPValue\(\).#'
+		- '#Method .*::convertToPhpValue\(\) has no return typehint specified.#'
+		- '#Method .*::convertToPhpValue\(\) has parameter \$value with no typehint specified.#'
+		- '#Method .*::convertToDatabaseValue\(\) has no return typehint specified.#'
+		- '#Method .*::convertToDatabaseValue\(\) has parameter \$value with no typehint specified.#'
+		- '#Method .*::requiresSqlCommentHint\(\) does not match parent method name: .*::requiresSQLCommentHint\(\).#'
+		- '#Method .*::getSqlDeclaration\(\) does not match parent method name: .*::getSQLDeclaration\(\).#'
+
+
 includes:
 	- vendor/phpstan/phpstan-strict-rules/rules.neon
