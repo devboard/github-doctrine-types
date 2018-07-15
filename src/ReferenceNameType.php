@@ -29,7 +29,7 @@ class ReferenceNameType extends Type
 
         $pattern = sprintf('/^(?<type>[0-9a-zA-Z]+)%s(?<id>.+)$/', self::SEPARATOR);
 
-        if (preg_match($pattern, $value, $matches)) {
+        if (1 === preg_match($pattern, $value, $matches)) {
             if (BranchName::TYPE === $matches['type']) {
                 return new BranchName($matches['id']);
             } elseif (TagName::TYPE === $matches['type']) {
