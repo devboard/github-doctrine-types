@@ -2,14 +2,20 @@
 
 declare(strict_types=1);
 
-namespace DevboardLib\GitHubDoctrineType\Status;
+namespace DevboardLib\GitHubDoctrineType\StatusCheck;
 
-use DevboardLib\GitHub\Status\StatusDescription;
+use DevboardLib\GitHub\StatusCheck\StatusCheckTargetUrl;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\TextType;
+use Doctrine\DBAL\Types\Type;
 
-class StatusDescriptionType extends TextType
+class StatusCheckTargetUrlType extends Type
 {
+    /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
+    public function getSqlDeclaration(array $fieldDeclaration, AbstractPlatform $platform): string
+    {
+        return $platform->getVarcharTypeDeclarationSQL(['length' => '300']);
+    }
+
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
     public function convertToPhpValue($value, AbstractPlatform $platform)
     {
@@ -17,7 +23,7 @@ class StatusDescriptionType extends TextType
             return null;
         }
 
-        return new StatusDescription($value);
+        return new StatusCheckTargetUrl($value);
     }
 
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
@@ -38,6 +44,6 @@ class StatusDescriptionType extends TextType
 
     public function getName(): string
     {
-        return 'GitHubStatusDescription';
+        return 'GitHubStatusCheckTargetUrl';
     }
 }
