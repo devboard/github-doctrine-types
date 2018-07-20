@@ -1,5 +1,8 @@
 CHANGELOG
 
+Version 2.x []:
+
+
 Version 1.1.0 [2018-06-25]:
  - Ugpgrading phpstan (0.10) & infection (0.9dev)
  - Upgrade devboard/lib-github, min is now 1.1
