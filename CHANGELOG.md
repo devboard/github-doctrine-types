@@ -1,7 +1,10 @@
 CHANGELOG
 
-Version 2.x []:
+Version 2.0 [2018-07-20]:
 
+ - Replace Status with StatusCheck
+ - Remove wrongly located IssueIdType
+ - Remove GravatarIdType
 
 Version 1.1.0 [2018-06-25]:
  - Ugpgrading phpstan (0.10) & infection (0.9dev)
