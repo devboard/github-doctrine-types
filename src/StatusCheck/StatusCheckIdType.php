@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace DevboardLib\GitHubDoctrineType\Status;
+namespace DevboardLib\GitHubDoctrineType\StatusCheck;
 
-use DevboardLib\GitHub\Status\StatusCreator;
+use DevboardLib\GitHub\StatusCheck\StatusCheckId;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\TextType;
+use Doctrine\DBAL\Types\IntegerType;
 
-class StatusCreatorType extends TextType
+class StatusCheckIdType extends IntegerType
 {
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
     public function convertToPhpValue($value, AbstractPlatform $platform)
@@ -17,7 +17,7 @@ class StatusCreatorType extends TextType
             return null;
         }
 
-        return StatusCreator::deserialize(json_decode($value, true));
+        return new StatusCheckId((int) $value);
     }
 
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
@@ -27,7 +27,7 @@ class StatusCreatorType extends TextType
             return null;
         }
 
-        return json_encode($value->serialize());
+        return $value->getId();
     }
 
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
@@ -38,6 +38,6 @@ class StatusCreatorType extends TextType
 
     public function getName(): string
     {
-        return 'GitHubStatusCreator';
+        return 'GitHubStatusCheckId';
     }
 }

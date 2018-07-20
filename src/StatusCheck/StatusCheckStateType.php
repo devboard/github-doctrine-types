@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace DevboardLib\GitHubDoctrineType\Status;
+namespace DevboardLib\GitHubDoctrineType\StatusCheck;
 
-use DevboardLib\GitHub\Status\StatusTargetUrl;
+use DevboardLib\GitHub\StatusCheck\StatusCheckState;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;
 
-class StatusTargetUrlType extends Type
+class StatusCheckStateType extends Type
 {
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
     public function getSqlDeclaration(array $fieldDeclaration, AbstractPlatform $platform): string
     {
-        return $platform->getVarcharTypeDeclarationSQL(['length' => '300']);
+        return $platform->getVarcharTypeDeclarationSQL(['length' => '20']);
     }
 
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
@@ -23,7 +23,7 @@ class StatusTargetUrlType extends Type
             return null;
         }
 
-        return new StatusTargetUrl($value);
+        return StatusCheckState::create($value);
     }
 
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
@@ -44,6 +44,6 @@ class StatusTargetUrlType extends Type
 
     public function getName(): string
     {
-        return 'GitHubStatusTargetUrl';
+        return 'GitHubStatusCheckState';
     }
 }

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace DevboardLib\GitHubDoctrineType\Status;
+namespace DevboardLib\GitHubDoctrineType\StatusCheck;
 
-use DevboardLib\GitHub\Status\StatusContext;
+use DevboardLib\GitHub\StatusCheck\StatusCheckContext;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;
 
-class StatusContextType extends Type
+class StatusCheckContextType extends Type
 {
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
     public function getSqlDeclaration(array $fieldDeclaration, AbstractPlatform $platform): string
@@ -23,7 +23,7 @@ class StatusContextType extends Type
             return null;
         }
 
-        return new StatusContext($value);
+        return new StatusCheckContext($value);
     }
 
     /** @SuppressWarnings("PHPMD.UnusedFormalParameter") */
@@ -44,6 +44,6 @@ class StatusContextType extends Type
 
     public function getName(): string
     {
-        return 'GitHubStatusContext';
+        return 'GitHubStatusCheckContext';
     }
 }
