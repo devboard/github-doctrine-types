@@ -18,11 +18,6 @@ jobs:
           command: composer install --prefer-dist --no-interaction
 
       - run:
-          name: Lint all PHP code files
-          command: git diff --name-only --diff-filter=ACMR 808533ed086586aab4c08822605720caf0d639cf | grep -E "^(src)\/.*php$" | xargs -n1 php -l 1> /dev/null
-
-
-      - run:
           name: PHPStan
           command: ./vendor/bin/phing phpstan
 
