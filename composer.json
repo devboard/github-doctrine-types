@@ -25,7 +25,7 @@
     "require-dev": {
         "ciaranmcnulty/phpspec-typehintedmethods": "^3.0",
         "friendsofphp/php-cs-fixer": "dev-long-line-fixers",
-        "infection/infection": "^0.9@dev",
+        "infection/infection": "^0.10.0",
         "leanphp/phpspec-code-coverage": "^4.0",
         "mockery/mockery": "^1.0",
         "phing/phing": "^2.16",
